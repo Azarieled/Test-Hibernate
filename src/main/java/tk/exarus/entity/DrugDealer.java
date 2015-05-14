@@ -46,13 +46,17 @@ public class DrugDealer {
     @ManyToOne
     private DrugShop drugShop;
 
+    private Integer salary;
+
     public DrugDealer() {
     }
 
     public DrugDealer(String name, String surname,
                       DrugDealer boss, Timestamp dob,
                       Timestamp jobStartDate, Boolean drugAddicted,
-                      Sex sex, Music favoriteMusic, DrugShop drugShop) {
+                      Sex sex, Music favoriteMusic, DrugShop drugShop,
+                      Integer salary)
+    {
         this.name = name;
         this.surname = surname;
         this.boss = boss;
@@ -62,6 +66,7 @@ public class DrugDealer {
         this.sex = sex;
         this.favoriteMusic = favoriteMusic;
         this.drugShop = drugShop;
+        this.salary = salary;
     }
 
     public Long getId() {
@@ -158,5 +163,13 @@ public class DrugDealer {
                 ", favoriteMusic=" + favoriteMusic +
                 ", drugShop=" + drugShop.getName() +
                 '}';
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 }
