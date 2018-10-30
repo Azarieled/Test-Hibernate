@@ -1,2 +1,2 @@
-# Test-Hibernate
-A test example for Hibernate
+# Hibernate test
+The test example for Hibernate.
